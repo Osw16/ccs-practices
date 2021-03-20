@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <style>
+        *{
+            background-image: linear-gradient(to right bottom, #fff5af, #fff4a5, #fff39b, #fff190, #fff086);
+        }
+        .container{
+            /* border:1px solid brown; */
+            background: blueviolet;
+            display:grid;   
+            /* grid-template-columns:1fr; */
+            width:600px;
+            height:200px;
+            border-radius: 5px;
+
+            -webkit-box-shadow: 13px 10px 34px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 13px 10px 34px 0px rgba(0,0,0,0.75);
+            box-shadow: 13px 10px 34px 0px rgba(0,0,0,0.75);    
+            
+            position: fixed;
+            top: 36%;
+            left: 26%;
+   
+
+        }
+
+        .item:nth-child(1){
+        background:hotpink;
+        place-self:center stretch;
+        height: 55px;
+        -webkit-box-shadow: 13px 10px 83px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 13px 10px 83px -15px rgba(0,0,0,0.75);
+box-shadow: 13px 10px 83px -15px rgba(0,0,0,0.75);
+
+
+        }
+        .item:not(:nth-child(1)){
+            background: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+</html>

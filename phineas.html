@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        .wrapper{
+            position:fixed;
+            top:50%;
+            left:50%;
+            margin-top:-50px;
+            margin-left: -100px;
+        }
+        .head{
+            position:absolute;
+            height: 10px;
+            width: 10px;
+            border-bottom-left-radius:20px;
+            border-bottom: 200px solid #ecbcb4;
+            border-left: 160px solid transparent;
+            border-right: 160px solid transparent;
+            transform: rotate(150deg);
+            /* background: #ecbcb4; */
+        }
+        .head::before{
+            content:"";
+            position:absolute;
+            width:120px;
+            height:200px;
+            top:100px;
+            left:-36px;
+            border:solid 5px #a1665e;
+            border-color: #a1665e transparent transparent transparent;
+            border-radius: 50%/10px 10px 0 0;
+        }
+        .head::after{
+            content:"";
+            position: absolute;
+            height:20px;
+            width:34px;
+            background: #ecbcb4;
+            border: 2px solid #a1665e;
+            border-bottom: none;
+            border-top-left-radius:40px;
+            border-top-right-radius:40px;
+            transform:rotate(-51deg);
+            top:110px;
+            left:-122px;
+        }
+        
+        /* eyes */
+        .eye-l{
+            position:absolute;
+            height:70px;
+            width:80px;
+            background:white;
+            border-radius:50%;
+            border:2px solid black;
+            transform: rotate(-30deg);
+            left: 100px;
+            top: -36px;
+        }
+        .eye-l::before{
+            content:"";
+            position:absolute;
+            height:22px;
+            width:26px;
+            border-radius:50%;
+            background: #1d1b38;
+            top:28px;
+            left:10px;
+            transform:rotate(-10deg);
+        }
+        .eye-l:after{
+            content:"";
+            position: absolute;
+            height:8px;
+            width:10px;
+            border-radius: 50%;
+            background:#fff;
+            top:35px;
+            left:24px;
+            transform: rotate(-10deg);
+            box-shadow: 100px 36px 0 -1px #a1665e,
+                        70px 36px 0 -1px #a1665e,
+                        85px 50px 0 -1px #a1665e;
+        }
+        /* eyes */
+        .eye-r{
+            position:absolute;
+            height:70px;
+            width:80px;
+            background:white;
+            border-radius:50%;
+            border:2px solid black;
+            transform: rotate(-30deg);
+            left: 40px;
+            top: -36px;
+            z-index: -1;
+        }
+        .eye-r::before{
+            content:"";
+            position:absolute;
+            height:22px;
+            width:26px;
+            border-radius:50%;
+            background: #1d1b38;
+            top:28px;
+            left:10px;
+            transform:rotate(-10deg);
+        }
+        .eye-r:after{
+            content:"";
+            position: absolute;
+            height:8px;
+            width:10px;
+            border-radius: 50%;
+            background:#fff;
+            top:35px;
+            left:24px;
+            transform: rotate(-10deg);
+            
+        }
+        .hair>div:nth-child(1){
+            position:absolute;
+            background:transparent;
+            height:30px;
+            width:100px;
+            border-top:20px solid red;
+            border-radius: 50px 40px 0 0;
+            bottom: 40px;
+            left: 180px;
+            transform: rotate(30deg);
+            z-index:-1px;
+        }
+        .hair>div:nth-child(2){
+            position:absolute;
+            background:transparent;
+            height:30px;
+            width:100px;
+            border-top:20px solid red;
+            border-radius: 50px 40px 0 0;
+            bottom: 40px;
+            left: 180px;
+            transform: rotate(90deg);
+            z-index:-1px;
+        }
+        .hair>div:nth-child(3){
+            position:absolute;
+            background:transparent;
+            height:30px;
+            width:100px;
+            border-top:20px solid red;
+            border-radius: 50px 40px 0 0;
+            bottom: 40px;
+            left: 180px;
+            transform: rotate(60deg);
+            z-index:-1px;
+        }
+        .hair>div:nth-child(4){
+            position:absolute;
+            background:transparent;
+            height:30px;
+            width:100px;
+            border-top:20px solid red;
+            border-radius: 50px 40px 0 0;
+            bottom: 40px;
+            left: 180px;
+            transform: rotate(1200deg);
+            z-index:-1px;
+        }
+        .hair>div:nth-child(5){
+            position:absolute;
+            background:transparent;
+            height:30px;
+            width:100px;
+            border-top:20px solid red;
+            border-radius: 50px 40px 0 0;
+            bottom: 40px;
+            left: 180px;
+            transform: rotate(10deg);
+            z-index:-1px;
+        }
+    </style>
+</head>
+<body style="background-color: #963c93;">
+    <div class="wrapper">
+        <div class="hair">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="head"></div>
+        <div class="eye-l"></div>
+        <div class="eye-r"></div>
+    </div>
+    
+</body>
+</html>
