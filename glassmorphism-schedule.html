@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: linear-gradient(to right top,#a07b3c, #514338,#b8a99a, #00d8ba, #009f85);
+            display:grid;
+            font-family: 'Source Sans Pro', sans-serif;
+            height:100vh;
+            margin:0;
+            place-items: center;
+        }
+        .glassmorphism-effect{
+            background: rgba( 255, 255, 255, 0.20 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 5.5px );
+            -webkit-backdrop-filter: blur( 5.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+        .container{
+            display:grid;
+            grid-template-columns:1fr 3fr;
+            grid-gap:20px;
+            height:90%;
+            width:80%;
+        }
+        .padding-box{
+            box-sizing:border-box;
+            padding: 24px;
+        }
+        .title p:first-child{
+            font-size:28px;
+            font-weight:600;
+            margin:0;
+        }
+        .title p:last-child{
+            font-size:16px;
+            margin-bottom:30px;
+        }
+        .goals{
+            align-items:center;
+            display:flex;
+        }
+        .goals div{
+            align-items:center;
+            border-radius:50%;
+            display:flex;
+            height:40px;
+            justify-content: center;
+            margin-right:10px;
+            width:40px;
+        }
+        .goals img{
+            width:30px;
+        }
+        .main-content > div:nth-child(2){
+            display:grid;
+            grid-gap:20px;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .card{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            height: 100px;
+            position:relative;
+            width: 100%;
+            margin-bottom:5px;
+        }
+        .card > div:first-child{
+            align-items: center;
+            border-radius: 16px;
+            display: flex;
+            grid-column:1 / 5;
+            grid-row: 1 / 2;
+            z-index:1;
+        }
+        .card > div:first-child p {
+            color: rgb(115 115 115);
+            margin:0;
+            padding-right: 7px;
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
+        }
+        .card > div:last-child{
+            border-radius: 16px;
+            display: grid;
+            grid-column: 2 / 5;
+            grid-row:1/ 2;
+            justify-content: center;
+            z-index: 2;
+        }
+        .card > div:last-child p:first-child{
+            font-size:24px;
+            font-weight:600;
+            margin:18px 0 -8px 0;
+        }
+        .card > div:last-child p:last-child{
+            margin:0;
+        }
+        .margin-bottom-card{
+            margin-bottom:20px;
+        }
+        .bubble{
+            border-radius:50%;
+            position: absolute;
+        }
+        .bubble-one{
+            height:80px;
+            left: 300px;
+            top:10px;
+            width:80px;
+        }
+        .bubble-two{
+            height:230px;
+            right: 200px;
+            top:-50px;
+            width: 230px;
+        }
+        .bubble-three{
+            height:50px;
+            right: 450px;
+            top:-20px;
+            width:50px;
+        }
+        .bubble-four{
+            bottom:40px;
+            height: 100px;
+            left:-30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bubble bubble-one glassmorphism-effect"></div>
+    <div class="bubble bubble-two glassmorphism-effect"></div>
+    <div class="bubble bubble-three glassmorphism-effect"></div>
+    <div class="bubble bubble-four glassmorphism-effect"></div>
+    <div class="container glassmorphism-effect padding-box">
+       <section class="glassmorphism-effect padding-box">
+           <div class="title">
+               <p>Objetivos</p>
+               <p>Lo que quiero lograr:</p>
+           </div>
+          <div class="goals">
+              <div class="glassmorphism-effect">
+                  <img src="https://img.icons8.com/nolan/64/love-book.png" alt="book">
+              </div>
+              <p>Leer más</p>
+          </div>
+          <div class="goals">
+              <div class="glassmorphism-effect">
+                  <img src="https://img.icons8.com/nolan/64/dumbbell.png" alt="pesa">
+              </div>
+              <p>Hacer ejercicio</p>
+          </div>
+          <div class="goals">
+              <div class="glassmorphism-effect">
+                  <img src="https://img.icons8.com/nolan/64/time-management.png" alt="person">
+              </div>
+              <p>Ser más productiva</p>
+          </div>
+          <div class="goals">
+              <div class="glassmorphism-effect">
+                  <img src="https://img.icons8.com/nolan/64/vegetarian-food.png" alt="food">
+              </div>
+              <p>Comer sano</p>
+          </div>
+          <div class="goals">
+              <div class="glassmorphism-effect">
+                  <img src="https://img.icons8.com/nolan/64/time.png " alt="clock">
+              </div>
+              <p>Dedicarme más tiempo</p>
+          </div>
+       </section>
+       <section class="main-content glassmorphism-effect padding-box">
+           <div class="title">
+               <p>Objetivos</p>
+               <p>Lo que logro</p>
+           </div>
+           <div>
+               <div>
+                   <p>Lunes</p> 
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Ejercicio</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>7:00am</p>
+                            <p>Cardio</p>
+                        </div>
+                   </div>
+               </div>
+               <div>
+                   <p>Martes</p> 
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Yoga</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>6:30am</p>
+                            <p>Clase grupal</p>
+                        </div>
+                   </div>
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Inglés</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>8:00am</p>
+                            <p>Listening</p>
+                        </div>
+                   </div>
+               </div>
+               <div>
+                   <p>Miercoles</p> 
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Ejercicio</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>7:00am</p>
+                            <p>Piernas</p>
+                        </div>
+                   </div>
+                   <div class="card">
+                    <div class="glassmorphism-effect">
+                        <p>Cita</p>
+                    </div>
+                    <div class="glassmorphism-effect">
+                        <p>8:00am</p>
+                        <p>Odontología</p>
+                    </div>
+               </div>
+           </div>  
+               <div>
+                   <p>Jueves</p> 
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Yoga</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>7:00am</p>
+                            <p>Clase grupal</p>
+                        </div>
+                   </div>
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Inglés</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>8:00am</p>
+                            <p>Éxamen</p>
+                        </div>
+                   </div>
+                   <div class="card">
+                    <div class="glassmorphism-effect">
+                        <p>Lectura</p>
+                    </div>
+                    <div class="glassmorphism-effect">
+                        <p>7:00am</p>
+                        <p>Pág. 70-90</p>
+                    </div>
+               </div>
+               </div>
+               <div>
+                   <p>Viernes</p> 
+                   <div class="card">
+                        <div class="glassmorphism-effect">
+                            <p>Ejercicio</p>
+                        </div>
+                        <div class="glassmorphism-effect">
+                            <p>7:00am</p>
+                            <p>Brazos</p>
+                        </div>
+                   </div>
+               </div>
+            
+           </div>
+
+       </section>
+    </div>
+    
+</body>
+</html>
